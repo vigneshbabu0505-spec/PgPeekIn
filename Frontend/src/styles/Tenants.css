@@ -1,0 +1,605 @@
+/* ================================
+   TENANTS PAGE
+================================ */
+
+.tenants-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+  color: #26303f;
+  display: flex;
+}
+
+
+/* ================================
+   SIDEBAR
+================================ */
+
+.tenants-sidebar {
+  width: 240px;
+  min-height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #e7eaf0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.tenants-brand {
+  padding: 28px 24px;
+  border-bottom: 1px solid #eef0f4;
+}
+
+.tenants-brand h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #1f4fd8;
+}
+
+.tenants-brand p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #7a8494;
+}
+
+.tenants-menu {
+  padding: 20px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tenants-menu a {
+  text-decoration: none;
+  color: #5e6878;
+  padding: 12px 14px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.tenants-menu a:hover {
+  background: #f2f5ff;
+  color: #1f4fd8;
+}
+
+.tenants-menu a.active {
+  background: #eaf0ff;
+  color: #1f4fd8;
+  font-weight: 600;
+}
+
+.tenants-menu span {
+  width: 22px;
+  text-align: center;
+}
+
+.tenants-logout {
+  margin: auto 12px 20px;
+  padding: 12px 14px;
+  text-decoration: none;
+  color: #e25555;
+  border-radius: 9px;
+  font-size: 14px;
+}
+
+.tenants-logout:hover {
+  background: #fff1f1;
+}
+
+
+/* ================================
+   MAIN
+================================ */
+
+.tenants-main {
+  margin-left: 240px;
+  width: calc(100% - 240px);
+  padding: 30px 36px;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.tenants-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.tenants-header h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.tenants-header p {
+  margin: 6px 0 0;
+  color: #7a8494;
+  font-size: 14px;
+}
+
+.tenants-owner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tenants-owner p {
+  margin-top: 2px;
+  font-size: 12px;
+}
+
+.tenants-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #eaf0ff;
+  color: #1f4fd8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+
+/* ================================
+   SUMMARY
+================================ */
+
+.tenant-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.tenant-summary-card {
+  background: #ffffff;
+  border: 1px solid #e7eaf0;
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.tenant-summary-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.total-icon {
+  background: #edf2ff;
+}
+
+.active-icon {
+  background: #e9f8ef;
+}
+
+.upcoming-icon {
+  background: #fff5df;
+}
+
+.completed-icon {
+  background: #eeeaff;
+}
+
+.tenant-summary-card p {
+  margin: 0;
+  color: #7a8494;
+  font-size: 13px;
+}
+
+.tenant-summary-card h2 {
+  margin: 4px 0 0;
+  font-size: 25px;
+}
+
+
+/* ================================
+   TENANTS SECTION
+================================ */
+
+.tenants-section {
+  background: #ffffff;
+  border: 1px solid #e7eaf0;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.tenants-section-header {
+  padding: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tenants-section-header h2 {
+  margin: 0;
+  font-size: 19px;
+}
+
+.tenants-section-header p {
+  margin: 5px 0 0;
+  color: #7a8494;
+  font-size: 13px;
+}
+
+.tenant-count {
+  background: #eef3ff;
+  color: #1f4fd8;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* ================================
+   SEARCH + FILTER
+================================ */
+
+.tenant-controls {
+  padding: 0 22px 20px;
+  display: flex;
+  gap: 12px;
+}
+
+.tenant-search {
+  flex: 1;
+  border: 1px solid #dfe3ea;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  background: #ffffff;
+}
+
+.tenant-search span {
+  font-size: 14px;
+}
+
+.tenant-search input {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 11px;
+  font-size: 13px;
+}
+
+.tenant-controls select {
+  border: 1px solid #dfe3ea;
+  border-radius: 9px;
+  padding: 0 14px;
+  outline: none;
+  background: #ffffff;
+  color: #4f5969;
+}
+
+
+/* ================================
+   TABLE
+================================ */
+
+.tenants-table-container {
+  overflow-x: auto;
+}
+
+.tenants-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tenants-table th {
+  text-align: left;
+  padding: 13px 22px;
+  background: #f8f9fb;
+  color: #7a8494;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.tenants-table td {
+  padding: 17px 22px;
+  border-top: 1px solid #edf0f4;
+  font-size: 13px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.tenants-table tbody tr:hover {
+  background: #fafbfe;
+}
+
+
+/* ================================
+   TENANT PROFILE
+================================ */
+
+.tenant-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tenant-table-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #eaf0ff;
+  color: #1f4fd8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.tenant-profile strong {
+  display: block;
+}
+
+.tenant-profile small {
+  display: block;
+  margin-top: 3px;
+  color: #929aaa;
+  font-size: 11px;
+}
+
+
+/* ================================
+   BOOKING
+================================ */
+
+.tenant-booking strong {
+  display: block;
+}
+
+.tenant-booking small {
+  display: block;
+  margin-top: 4px;
+  color: #929aaa;
+  font-size: 11px;
+}
+
+
+/* ================================
+   PG / ROOM
+================================ */
+
+.tenant-pg-room strong {
+  display: block;
+}
+
+.tenant-pg-room span {
+  display: block;
+  margin-top: 4px;
+  color: #7a8494;
+  font-size: 12px;
+}
+
+
+/* ================================
+   STAY
+================================ */
+
+.tenant-stay {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #596273;
+  font-size: 12px;
+}
+
+.tenant-arrow {
+  color: #9aa2af;
+}
+
+
+/* ================================
+   CONTACT
+================================ */
+
+.tenant-phone {
+  color: #596273;
+  font-size: 12px;
+}
+
+
+/* ================================
+   STATUS
+================================ */
+
+.tenant-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.tenant-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.tenant-status.active {
+  background: #eaf8ef;
+  color: #248654;
+}
+
+.tenant-status.active .tenant-status-dot {
+  background: #2eae68;
+}
+
+.tenant-status.upcoming {
+  background: #fff5df;
+  color: #a76d10;
+}
+
+.tenant-status.upcoming .tenant-status-dot {
+  background: #e7a72e;
+}
+
+.tenant-status.completed {
+  background: #eeeaff;
+  color: #6859c9;
+}
+
+.tenant-status.completed .tenant-status-dot {
+  background: #7a6be8;
+}
+
+
+/* ================================
+   VIEW BUTTON
+================================ */
+
+.view-tenant-btn {
+  text-decoration: none;
+  color: #1f4fd8;
+  border: 1px solid #d7e0fb;
+  padding: 7px 13px;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.view-tenant-btn:hover {
+  background: #eef3ff;
+}
+
+
+/* ================================
+   EMPTY STATE
+================================ */
+
+.no-tenants {
+  padding: 55px 20px;
+  text-align: center;
+}
+
+.no-tenants div {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.no-tenants h3 {
+  margin: 0;
+}
+
+.no-tenants p {
+  color: #7a8494;
+  font-size: 13px;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1100px) {
+
+  .tenant-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 800px) {
+
+  .tenants-sidebar {
+    width: 200px;
+  }
+
+  .tenants-main {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+    padding: 25px;
+  }
+
+  .tenants-header {
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .tenants-sidebar {
+    width: 100%;
+    min-height: auto;
+    position: relative;
+  }
+
+  .tenants-page {
+    flex-direction: column;
+  }
+
+  .tenants-menu {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .tenants-logout {
+    margin: 5px 12px 15px;
+  }
+
+  .tenants-main {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .tenants-header {
+    flex-direction: column;
+  }
+
+  .tenant-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .tenant-controls {
+    flex-direction: column;
+  }
+
+  .tenant-controls select {
+    height: 42px;
+  }
+
+}
+
+
+@media (max-width: 450px) {
+
+  .tenants-main {
+    padding: 15px;
+  }
+
+  .tenants-header h1 {
+    font-size: 25px;
+  }
+
+}

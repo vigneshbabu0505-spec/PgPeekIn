@@ -1,0 +1,997 @@
+* {
+  box-sizing: border-box;
+}
+
+.manage-rooms-layout {
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.owner-sidebar {
+  width: 250px;
+  background: #102a43;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.owner-brand {
+  padding: 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.owner-brand h2 {
+  margin: 0;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.owner-brand p {
+  margin: 5px 0 0;
+  color: #bcccdc;
+  font-size: 13px;
+}
+
+.owner-menu {
+  padding: 25px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.owner-menu-item {
+  color: #d9e2ec;
+  text-decoration: none;
+  padding: 13px 15px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.owner-menu-item span {
+  width: 22px;
+  text-align: center;
+}
+
+.owner-menu-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  transform: translateX(2px);
+}
+
+.owner-menu-item.active {
+  background: #f59e0b;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 5px 12px rgba(245, 158, 11, 0.18);
+}
+
+.owner-logout {
+  margin-top: auto;
+  margin-bottom: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 13px 15px;
+  border-radius: 9px;
+  color: #d9e2ec;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.owner-logout:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.manage-rooms-main {
+  margin-left: 250px;
+  min-height: 100vh;
+  padding: 35px 45px;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.rooms-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.rooms-header h1 {
+  margin: 0;
+  color: #102a43;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.rooms-header p {
+  margin: 8px 0 0;
+  color: #627d98;
+  font-size: 14px;
+}
+
+.add-room-btn {
+  background: #f59e0b;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 5px 12px rgba(245, 158, 11, 0.18);
+  transition: all 0.2s ease;
+}
+
+.add-room-btn:hover {
+  background: #d97706;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   PG SELECTOR
+========================================================= */
+
+.pg-selector-section {
+  background: white;
+  border: 1px solid #e6eaf0;
+  border-radius: 14px;
+  padding: 21px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+  box-shadow: 0 4px 12px rgba(16, 42, 67, 0.03);
+}
+
+.pg-selector-left label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #627d98;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.pg-selector-section select {
+  min-width: 250px;
+  padding: 11px 13px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #102a43;
+  background: white;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.pg-selector-section select:focus {
+  border-color: #f59e0b;
+}
+
+.selected-pg-info {
+  text-align: right;
+  padding-right: 5px;
+}
+
+.selected-pg-info span {
+  display: block;
+  color: #829ab1;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.selected-pg-info strong {
+  display: block;
+  color: #102a43;
+  font-size: 16px;
+}
+
+
+/* =========================================================
+   SUMMARY CARDS
+========================================================= */
+
+.room-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 17px;
+  margin-bottom: 22px;
+}
+
+.room-summary-card {
+  background: white;
+  border: 1px solid #e6eaf0;
+  border-radius: 13px;
+  padding: 19px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 4px 12px rgba(16, 42, 67, 0.03);
+  transition: all 0.2s ease;
+}
+
+.room-summary-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px rgba(16, 42, 67, 0.07);
+}
+
+.summary-icon {
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  background: #f1f5f9;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+}
+
+.available-icon {
+  background: #ecfdf3;
+}
+
+.occupied-icon {
+  background: #fff7ed;
+}
+
+.room-summary-card p {
+  margin: 0;
+  color: #627d98;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.room-summary-card h2 {
+  margin: 4px 0 0;
+  color: #102a43;
+  font-size: 24px;
+}
+
+
+/* =========================================================
+   SLOT AVAILABILITY
+========================================================= */
+
+.availability-section {
+  background: white;
+  border: 1px solid #e6eaf0;
+  border-radius: 14px;
+  padding: 23px 25px;
+  margin-bottom: 22px;
+  box-shadow: 0 4px 12px rgba(16, 42, 67, 0.03);
+}
+
+.availability-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.availability-header h2 {
+  margin: 0;
+  color: #102a43;
+  font-size: 18px;
+}
+
+.availability-header p {
+  margin: 5px 0 0;
+  color: #829ab1;
+  font-size: 13px;
+}
+
+.availability-percentage {
+  text-align: right;
+}
+
+.availability-percentage strong {
+  display: block;
+  color: #102a43;
+  font-size: 24px;
+}
+
+.availability-percentage span {
+  color: #829ab1;
+  font-size: 11px;
+}
+
+.availability-bar {
+  width: 100%;
+  height: 12px;
+  background: #e8edf3;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 22px;
+}
+
+.occupied-bar {
+  height: 100%;
+  background: #f59e0b;
+  border-radius: 20px;
+  transition: width 0.4s ease;
+}
+
+.availability-details {
+  display: flex;
+  gap: 35px;
+  margin-top: 18px;
+}
+
+.availability-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.availability-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  display: block;
+}
+
+.occupied-dot {
+  background: #f59e0b;
+}
+
+.available-dot {
+  background: #22c55e;
+}
+
+.total-dot {
+  background: #94a3b8;
+}
+
+.availability-item strong {
+  color: #102a43;
+  font-size: 14px;
+  margin-right: 4px;
+}
+
+.availability-item span:last-child {
+  color: #829ab1;
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   ROOMS SECTION
+========================================================= */
+
+.rooms-section {
+  background: white;
+  border: 1px solid #e6eaf0;
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(16, 42, 67, 0.03);
+}
+
+.rooms-section-header {
+  margin-bottom: 20px;
+}
+
+.rooms-section-header h2 {
+  margin: 0;
+  color: #102a43;
+  font-size: 19px;
+}
+
+.rooms-section-header p {
+  margin: 6px 0 0;
+  color: #627d98;
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.rooms-table-container {
+  overflow-x: auto;
+}
+
+.rooms-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 850px;
+}
+
+.rooms-table th {
+  text-align: left;
+  background: #f8fafc;
+  color: #627d98;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  padding: 13px 14px;
+  border-bottom: 1px solid #e6eaf0;
+}
+
+.rooms-table th:first-child {
+  border-radius: 8px 0 0 0;
+}
+
+.rooms-table th:last-child {
+  border-radius: 0 8px 0 0;
+}
+
+.rooms-table td {
+  padding: 15px 14px;
+  border-top: 1px solid #edf2f7;
+  color: #334e68;
+  font-size: 13px;
+}
+
+.rooms-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.rooms-table tbody tr:hover {
+  background: #fafcff;
+}
+
+.rooms-table td strong {
+  color: #102a43;
+}
+
+
+/* =========================================================
+   ROOM NUMBER
+========================================================= */
+
+.room-number {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 150px;
+}
+
+.room-icon {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  background: #f1f5f9;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+}
+
+.room-number-text {
+  color: #102a43;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   SHARING BADGE
+========================================================= */
+
+.sharing-badge {
+  display: inline-block;
+  background: #f8fafc;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  padding: 5px 9px;
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   ROOM TYPE
+========================================================= */
+
+.room-type {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.ac-type {
+  background: #eef2ff;
+  color: #4338ca;
+}
+
+.non-ac-type {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+
+/* =========================================================
+   SLOT COUNTS
+========================================================= */
+
+.slot-count {
+  color: #334e68;
+  font-weight: 600;
+}
+
+.available-text {
+  color: #16803c !important;
+  font-weight: 700;
+}
+
+.occupied-text {
+  color: #c2410c !important;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.room-status {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 15px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.room-status.available {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.room-status.full {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+
+/* =========================================================
+   EDIT BUTTON
+========================================================= */
+
+.edit-room-btn {
+  border: 1px solid #cbd5e1;
+  background: white;
+  color: #102a43;
+  padding: 7px 13px;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.edit-room-btn:hover {
+  border-color: #f59e0b;
+  color: #b45309;
+  background: #fffbeb;
+}
+
+
+/* =========================================================
+   SLOT INFORMATION
+========================================================= */
+
+.slot-info-section {
+  margin-top: 22px;
+  background: #fffaf0;
+  border: 1px solid #fde68a;
+  border-radius: 12px;
+  padding: 19px 20px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.slot-info-icon {
+  font-size: 23px;
+  flex-shrink: 0;
+}
+
+.slot-info-section h3 {
+  margin: 0;
+  color: #92400e;
+  font-size: 15px;
+}
+
+.slot-info-section p {
+  margin: 6px 0 0;
+  color: #78350f;
+  line-height: 1.6;
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .manage-rooms-main {
+    padding: 30px;
+  }
+
+  .room-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 800px) {
+
+  .owner-sidebar {
+    width: 70px;
+  }
+
+  .owner-brand {
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .owner-brand h2,
+  .owner-brand p {
+    display: none;
+  }
+
+  .owner-menu {
+    padding: 20px 10px;
+  }
+
+  .owner-menu-item {
+    justify-content: center;
+    font-size: 0;
+    padding: 13px 8px;
+  }
+
+  .owner-menu-item span {
+    font-size: 18px;
+  }
+
+  .owner-logout {
+    font-size: 0;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .manage-rooms-main {
+    margin-left: 70px;
+    padding: 25px;
+  }
+
+  .rooms-header {
+    align-items: flex-start;
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .manage-rooms-main {
+    padding: 20px;
+  }
+
+  .rooms-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .rooms-header h1 {
+    font-size: 26px;
+  }
+
+  .add-room-btn {
+    width: 100%;
+  }
+
+  .pg-selector-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .pg-selector-section select {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .selected-pg-info {
+    text-align: left;
+  }
+
+  .room-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .availability-header {
+    align-items: flex-start;
+  }
+
+  .availability-details {
+    flex-wrap: wrap;
+    gap: 15px 25px;
+  }
+
+  .rooms-section {
+    padding: 18px;
+  }
+
+  .slot-info-section {
+    padding: 17px;
+  }
+
+}
+
+
+/* =========================================================
+   ADD ROOM MODAL
+========================================================= */
+
+.room-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(15, 23, 42, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  overflow-y: auto;
+}
+
+.room-modal {
+  width: 100%;
+  max-width: 560px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.22);
+  overflow: hidden;
+}
+
+.room-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px 25px 20px;
+  border-bottom: 1px solid #e6eaf0;
+}
+
+.room-modal-header h2 {
+  margin: 0;
+  color: #102a43;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.room-modal-header p {
+  margin: 6px 0 0;
+  color: #829ab1;
+  font-size: 13px;
+}
+
+.close-modal-btn {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 8px;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 23px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.close-modal-btn:hover {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.room-form {
+  padding: 24px 25px 25px;
+}
+
+.room-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 17px;
+}
+
+.room-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.room-form-group label {
+  color: #334e68;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.room-form-group input,
+.room-form-group select {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #102a43;
+  font-size: 13px;
+  outline: none;
+}
+
+.room-form-group input:focus,
+.room-form-group select:focus {
+  border-color: #f59e0b;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.10);
+}
+
+.room-slot-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 13px 14px;
+  background: #fffaf0;
+  border: 1px solid #fde68a;
+  border-radius: 9px;
+}
+
+.room-slot-note span {
+  font-size: 17px;
+}
+
+.room-slot-note p {
+  margin: 0;
+  color: #78350f;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.room-slot-note strong {
+  color: #92400e;
+}
+
+.room-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid #edf2f7;
+}
+
+.cancel-room-btn,
+.save-room-btn {
+  padding: 11px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancel-room-btn {
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #475569;
+}
+
+.save-room-btn {
+  border: none;
+  background: #f59e0b;
+  color: #ffffff;
+}
+
+.save-room-btn:hover {
+  background: #d97706;
+}
+
+.cancel-room-btn:disabled,
+.save-room-btn:disabled,
+.add-room-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   EDIT ROOM MODAL
+========================================================= */
+
+.edit-sharing-note {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.edit-sharing-note span {
+  font-size: 16px;
+}
+
+.edit-sharing-note p {
+  color: #475569;
+}
+
+.edit-sharing-note strong {
+  color: #102a43;
+}
+
+
+/* Disabled Sharing Type */
+
+.room-form-group select:disabled {
+  background: #f1f5f9;
+  color: #64748b;
+  cursor: not-allowed;
+  border-color: #cbd5e1;
+  opacity: 1;
+}
+
+
+/* =========================================================
+   MODAL RESPONSIVE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .room-modal-overlay {
+    padding: 15px;
+  }
+
+  .room-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .room-modal-header,
+  .room-form {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .room-form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .cancel-room-btn,
+  .save-room-btn {
+    width: 100%;
+  }
+
+}

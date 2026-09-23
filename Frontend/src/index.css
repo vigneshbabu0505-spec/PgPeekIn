@@ -1,0 +1,52 @@
+/* ================================
+   GLOBAL RESET
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f5f7fb;
+  color: #26303f;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default link styling */
+a {
+  color: inherit;
+}
+
+/* Buttons and inputs use the same font */
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+/* Images never overflow */
+img {
+  max-width: 100%;
+  display: block;
+}

@@ -1,0 +1,503 @@
+* {
+  box-sizing: border-box;
+}
+
+.edit-pg-layout {
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.owner-sidebar {
+  width: 250px;
+  background: #102a43;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.sidebar-logo {
+  padding: 28px 25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-logo span {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.logo-box {
+  width: 40px;
+  height: 40px;
+  background: #f59e0b;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.sidebar-nav {
+  padding: 25px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.sidebar-nav a,
+.sidebar-bottom a {
+  color: #d9e2ec;
+  text-decoration: none;
+  padding: 13px 15px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  transition: 0.2s ease;
+}
+
+.sidebar-nav a span,
+.sidebar-bottom a span {
+  width: 22px;
+  text-align: center;
+}
+
+.sidebar-nav a:hover,
+.sidebar-bottom a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+.sidebar-nav a.active {
+  background: #f59e0b;
+  color: white;
+  font-weight: 600;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.edit-pg-main {
+  margin-left: 250px;
+  min-height: 100vh;
+  padding: 35px 45px;
+  max-width: 1250px;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.edit-pg-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.edit-pg-header h1 {
+  margin: 0;
+  color: #102a43;
+  font-size: 30px;
+}
+
+.edit-pg-header p {
+  margin: 8px 0 0;
+  color: #627d98;
+  font-size: 14px;
+}
+
+.back-btn {
+  border: 1px solid #cbd5e1;
+  background: white;
+  color: #102a43;
+  padding: 11px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.edit-pg-card {
+  background: white;
+  border: 1px solid #e6edf5;
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 25px;
+  box-shadow: 0 5px 18px rgba(16, 42, 67, 0.05);
+}
+
+.section-heading {
+  margin-bottom: 25px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  color: #102a43;
+  font-size: 20px;
+}
+
+.section-heading p {
+  margin: 6px 0 0;
+  color: #627d98;
+  font-size: 14px;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.edit-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-group label {
+  color: #243b53;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #102a43;
+  background: white;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #f59e0b;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid #edf2f7;
+}
+
+.cancel-btn {
+  padding: 12px 20px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #102a43;
+  background: white;
+  font-weight: 600;
+}
+
+.save-btn {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  background: #102a43;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background: #163d5f;
+}
+
+.save-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   PHOTO GALLERY
+========================================================= */
+
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.photo-item {
+  position: relative;
+  height: 180px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+}
+
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-item.primary-photo {
+  border: 3px solid #f59e0b;
+}
+
+.primary-badge {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  background: #f59e0b;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.no-photos {
+  min-height: 150px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #627d98;
+}
+
+.no-photos span {
+  font-size: 30px;
+}
+
+.no-photos p {
+  margin: 8px 0 0;
+}
+
+/* =========================================================
+   UPLOAD
+========================================================= */
+
+.upload-section {
+  margin-top: 25px;
+}
+
+.upload-box {
+  min-height: 150px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s ease;
+  background: #fafbfc;
+}
+
+.upload-box:hover {
+  border-color: #f59e0b;
+  background: #fffbeb;
+}
+
+.upload-icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.upload-box strong {
+  color: #102a43;
+  font-size: 15px;
+}
+
+.upload-box span {
+  color: #627d98;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.hidden-file-input {
+  display: none;
+}
+
+/* =========================================================
+   SELECTED FILES
+========================================================= */
+
+.selected-files {
+  margin-top: 20px;
+  padding: 18px;
+  background: #f8fafc;
+  border-radius: 10px;
+}
+
+.selected-files h3 {
+  margin: 0 0 12px;
+  color: #102a43;
+  font-size: 14px;
+}
+
+.selected-file {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 13px;
+  color: #486581;
+}
+
+.selected-file span:nth-child(2) {
+  flex: 1;
+  color: #243b53;
+}
+
+.upload-btn {
+  margin-top: 18px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #f59e0b;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.upload-btn:hover {
+  background: #d97706;
+}
+
+.upload-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.edit-pg-error {
+  padding: 13px 16px;
+  margin-bottom: 20px;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+  .photo-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .owner-sidebar {
+    width: 70px;
+  }
+
+  .sidebar-logo {
+    justify-content: center;
+    padding: 20px 10px;
+  }
+
+  .sidebar-logo span {
+    display: none;
+  }
+
+  .sidebar-nav a,
+  .sidebar-bottom a {
+    justify-content: center;
+    font-size: 0;
+    padding: 13px 8px;
+  }
+
+  .sidebar-nav a span,
+  .sidebar-bottom a span {
+    font-size: 18px;
+  }
+
+  .edit-pg-main {
+    margin-left: 70px;
+    padding: 25px;
+  }
+
+  .edit-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .edit-pg-main {
+    padding: 20px;
+  }
+
+  .edit-pg-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .edit-pg-card {
+    padding: 20px;
+  }
+
+  .photo-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .cancel-btn,
+  .save-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

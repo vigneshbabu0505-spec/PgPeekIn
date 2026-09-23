@@ -1,0 +1,537 @@
+/* ========================================
+   PGPEEKIN REGISTER PAGE
+======================================== */
+
+:root {
+  --navy: #1c3b63;
+  --navy-dark: #142c4b;
+  --orange: #e8791f;
+  --orange-dark: #c9660f;
+
+  --background: #f7f8fa;
+  --surface: #ffffff;
+
+  --text-primary: #26303f;
+  --text-secondary: #62697a;
+  --text-muted: #97a0af;
+
+  --border: #dfe3e8;
+  --error: #c94a3d;
+}
+
+
+/* PAGE */
+
+.register-page {
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.register-page * {
+  box-sizing: border-box;
+}
+
+
+/* TWO COLUMN LAYOUT */
+
+.register-container {
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+/* ========================================
+   LEFT SIDE
+======================================== */
+
+.register-left {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: left;
+  justify-content: center;
+
+  padding: 4rem;
+
+  background: linear-gradient(
+    135deg,
+    var(--navy),
+    var(--navy-dark)
+  );
+
+  color: white;
+}
+
+
+.register-brand-content {
+  width: 100%;
+  max-width: 500px;
+}
+
+
+.register-brand-logo {
+  width: 200px;
+  height: 200px;
+  border-radius: 18px;
+
+  margin-bottom: 2rem;
+}
+
+
+.register-brand-content h1 {
+  font-size: 3rem;
+
+  margin: 0 0 0.5rem;
+
+  font-weight: 700;
+}
+
+
+.register-brand-content h2 {
+  font-size: 1.7rem;
+
+  margin-bottom: 1.5rem;
+
+  font-weight: 500;
+
+  color: rgba(255, 255, 255, 0.9);
+}
+
+
+.register-brand-tagline {
+  font-weight: 600;
+
+  color: var(--orange);
+
+  letter-spacing: 1px;
+
+  margin-bottom: 2rem;
+}
+
+
+.register-brand-tagline span {
+  margin: 0 0.4rem;
+}
+
+
+.register-brand-description {
+  max-width: 450px;
+
+  font-size: 1rem;
+
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  margin-bottom: 2rem;
+}
+
+
+/* FEATURES */
+
+.register-feature-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+}
+
+
+.register-feature-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.8rem;
+}
+
+
+.register-feature-item p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.9);
+}
+
+
+.register-check-icon {
+  width: 27px;
+  height: 27px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--orange);
+
+  font-weight: bold;
+}
+
+
+/* ========================================
+   RIGHT SIDE
+======================================== */
+
+.register-right {
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  padding: 3rem;
+
+  background: var(--background);
+}
+
+
+.register-form-container {
+  width: 100%;
+
+  max-width: 500px;
+
+  background: var(--surface);
+
+  padding: 2.5rem 3rem;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 20px 45px rgba(28, 59, 99, 0.12);
+}
+
+
+/* HEADER */
+
+.register-form-header {
+  margin-bottom: 1.8rem;
+}
+
+
+.register-form-header h1 {
+  margin: 0 0 0.5rem;
+
+  font-size: 2rem;
+
+  color: var(--navy-dark);
+}
+
+
+.register-form-header p {
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-size: 0.95rem;
+}
+
+
+/* FORM */
+
+.register-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 1.1rem;
+}
+
+
+.register-form-field label {
+  display: block;
+
+  margin-bottom: 0.45rem;
+
+  font-size: 0.88rem;
+
+  font-weight: 600;
+
+  color: var(--text-primary);
+}
+
+
+/* INPUTS */
+
+.register-input {
+  width: 100%;
+
+  padding: 0.8rem 0.9rem;
+
+  border: 1.5px solid var(--border);
+
+  border-radius: 10px;
+
+  outline: none;
+
+  font-size: 0.92rem;
+
+  transition: 0.2s;
+}
+
+
+.register-input:focus {
+  border-color: var(--orange);
+
+  box-shadow:
+    0 0 0 3px rgba(232, 121, 31, 0.12);
+}
+
+
+.input-error {
+  border-color: var(--error);
+}
+
+
+.register-field-error {
+  margin: 0.35rem 0 0;
+
+  color: var(--error);
+
+  font-size: 0.78rem;
+}
+
+
+/* PASSWORD */
+
+.register-password-wrapper {
+  position: relative;
+}
+
+
+.register-password-wrapper .register-input {
+  padding-right: 55px;
+}
+
+
+.register-password-toggle {
+  position: absolute;
+
+  right: 12px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  border: none;
+
+  background: transparent;
+
+  color: var(--orange-dark);
+
+  font-size: 0.8rem;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+/* ROLE */
+
+.role-selection {
+  display: flex;
+
+  gap: 1rem;
+}
+
+
+.role-option {
+  flex: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 0.5rem;
+
+  padding: 0.8rem;
+
+  border: 1.5px solid var(--border);
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+.role-option:hover {
+  border-color: var(--orange);
+}
+
+
+.role-option input {
+  accent-color: var(--orange);
+}
+
+
+/* BUTTON */
+
+.register-submit-btn {
+  width: 100%;
+
+  margin-top: 0.5rem;
+
+  padding: 0.9rem;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    135deg,
+    var(--navy),
+    var(--navy-dark)
+  );
+
+  color: white;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+.register-submit-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 10px 25px rgba(28, 59, 99, 0.25);
+}
+
+
+.register-submit-btn:disabled {
+  opacity: 0.7;
+
+  cursor: not-allowed;
+}
+
+
+/* LOGIN PROMPT */
+
+.register-login-prompt {
+  text-align: center;
+
+  margin-top: 1.5rem;
+
+  color: var(--text-secondary);
+
+  font-size: 0.9rem;
+}
+
+
+.register-login-prompt a {
+  margin-left: 0.3rem;
+
+  color: var(--orange-dark);
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+
+.register-login-prompt a:hover {
+  text-decoration: underline;
+}
+
+
+/* MOBILE LOGO */
+
+.register-mobile-logo {
+  display: none;
+
+  text-align: center;
+
+  margin-bottom: 1.5rem;
+}
+
+
+.register-mobile-logo img {
+  width: 90px;
+
+  border-radius: 15px;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+
+  .register-container {
+    grid-template-columns: 1fr;
+  }
+
+  .register-left {
+    min-height: auto;
+
+    padding: 3rem 2rem;
+  }
+
+  .register-brand-content {
+    text-align: center;
+  }
+
+  .register-brand-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .register-feature-list {
+    align-items: center;
+  }
+
+  .register-right {
+    min-height: auto;
+
+    align-items: center;
+
+    padding: 3rem 1.5rem;
+  }
+}
+
+
+@media (max-width: 500px) {
+
+  .register-left {
+    display: none;
+  }
+
+  .register-right {
+    min-height: 100vh;
+
+    padding: 1.5rem;
+  }
+
+  .register-form-container {
+    padding: 2rem 1.5rem;
+
+    box-shadow: none;
+  }
+
+  .register-mobile-logo {
+    display: block;
+  }
+
+  .register-form-header {
+    text-align: center;
+  }
+
+  .role-selection {
+    flex-direction: column;
+  }
+}

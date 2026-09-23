@@ -1,0 +1,29 @@
+# Environment / secrets
+.env
+*.env
+.env.local
+.env.*.local
+
+# IDE
+.idea/
+.vscode/
+
+# Backend (Spring Boot / Maven)
+Backend/target/
+Backend/.mvn/wrapper/maven-wrapper.jar
+*.class
+*.log
+HELP.md
+
+# Frontend (React / Vite)
+Frontend/node_modules/
+Frontend/dist/
+Frontend/dist-ssr/
+Frontend/*.local
+Frontend/npm-debug.log*
+Frontend/yarn-debug.log*
+Frontend/yarn-error.log*
+Frontend/pnpm-debug.log*
+
+# OS
+.DS_Store

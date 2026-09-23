@@ -1,0 +1,406 @@
+/* ================================
+   PROFILE PAGE
+================================ */
+
+.profile-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+  color: #26303f;
+  display: flex;
+}
+
+
+/* ================================
+   SIDEBAR
+================================ */
+
+.profile-sidebar {
+  width: 240px;
+  min-height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #e7eaf0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.profile-brand {
+  padding: 28px 24px;
+  border-bottom: 1px solid #eef0f4;
+}
+
+.profile-brand h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #1f4fd8;
+}
+
+.profile-brand p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #7a8494;
+}
+
+.profile-menu {
+  padding: 20px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.profile-menu a {
+  text-decoration: none;
+  color: #5e6878;
+  padding: 12px 14px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.profile-menu a:hover {
+  background: #f2f5ff;
+  color: #1f4fd8;
+}
+
+.profile-menu a.active {
+  background: #eaf0ff;
+  color: #1f4fd8;
+  font-weight: 600;
+}
+
+.profile-menu span {
+  width: 22px;
+  text-align: center;
+}
+
+.profile-logout {
+  margin: auto 12px 20px;
+  padding: 12px 14px;
+  text-decoration: none;
+  color: #e25555;
+  border-radius: 9px;
+  font-size: 14px;
+}
+
+.profile-logout:hover {
+  background: #fff1f1;
+}
+
+
+/* ================================
+   MAIN
+================================ */
+
+.profile-main {
+  margin-left: 240px;
+  width: calc(100% - 240px);
+  padding: 30px 36px;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.profile-header {
+  margin-bottom: 28px;
+}
+
+.profile-header h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.profile-header p {
+  margin: 6px 0 0;
+  color: #7a8494;
+  font-size: 14px;
+}
+
+
+/* ================================
+   PROFILE CARD
+================================ */
+
+.profile-card {
+  background: #ffffff;
+  border: 1px solid #e7eaf0;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+
+/* ================================
+   PROFILE TOP
+================================ */
+
+.profile-top {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #fafbff;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.large-profile-avatar {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: #eaf0ff;
+  color: #1f4fd8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.profile-name h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.profile-name p {
+  margin: 5px 0;
+  color: #7a8494;
+  font-size: 13px;
+}
+
+.profile-active {
+  color: #248654;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* ================================
+   PROFILE SECTIONS
+================================ */
+
+.profile-section {
+  padding: 28px 30px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.profile-section:last-child {
+  border-bottom: none;
+}
+
+.profile-section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.profile-section-title h3,
+.security-section h3 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.profile-section-title p,
+.security-section p {
+  margin: 5px 0 0;
+  color: #7a8494;
+  font-size: 13px;
+}
+
+
+/* ================================
+   PERSONAL DETAILS
+================================ */
+
+.profile-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.profile-field label {
+  display: block;
+  margin-bottom: 7px;
+  color: #7a8494;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.profile-value {
+  padding: 12px 14px;
+  background: #f8f9fb;
+  border: 1px solid #edf0f4;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #3f4857;
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+.edit-profile-btn,
+.change-password-btn {
+  border: 1px solid #d7e0fb;
+  background: #ffffff;
+  color: #1f4fd8;
+  padding: 9px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.edit-profile-btn:hover,
+.change-password-btn:hover {
+  background: #eef3ff;
+}
+
+
+/* ================================
+   PROPERTY INFO
+================================ */
+
+.property-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.property-info-card {
+  padding: 18px;
+  border: 1px solid #e7eaf0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.property-info-card > span {
+  width: 40px;
+  height: 40px;
+  background: #eef3ff;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.property-info-card p {
+  margin: 0;
+  color: #7a8494;
+  font-size: 12px;
+}
+
+.property-info-card strong {
+  display: block;
+  margin-top: 3px;
+  font-size: 20px;
+}
+
+
+/* ================================
+   SECURITY
+================================ */
+
+.security-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+
+  .profile-sidebar {
+    width: 200px;
+  }
+
+  .profile-main {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+    padding: 25px;
+  }
+
+  .property-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .profile-page {
+    flex-direction: column;
+  }
+
+  .profile-sidebar {
+    width: 100%;
+    min-height: auto;
+    position: relative;
+  }
+
+  .profile-menu {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .profile-logout {
+    margin: 5px 12px 15px;
+  }
+
+  .profile-main {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .profile-details {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-section-title {
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .security-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+}
+
+
+@media (max-width: 450px) {
+
+  .profile-main {
+    padding: 15px;
+  }
+
+  .profile-header h1 {
+    font-size: 25px;
+  }
+
+  .profile-top {
+    padding: 22px;
+  }
+
+  .profile-section {
+    padding: 22px;
+  }
+
+}
